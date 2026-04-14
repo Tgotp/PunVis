@@ -1,0 +1,481 @@
+[
+    {
+        "id": "001",
+        "original_word": "机不可失",
+        "pun_word": "鸡不可湿",
+        "training_prompt_zh": "一只小鸡在下雨天撑着一把伞，小心翼翼不让雨水淋湿它的身体",
+        "training_prompt_en": "A chick was holding an umbrella on a rainy day, carefully trying to keep its body dry.",
+        "key_elements": ["chick", "umbrella", "rain"],
+        "style": ["bright cartoon, clean background" ],
+        "image_path": "images/001.png"
+    },
+    {
+        "id": "002",
+        "original_word": "声东击西",
+        "pun_word": "圣东鸡西",
+        "training_prompt_zh": "在一个广场中，有一个写着北门的门匾前，圣人朝着右边走，一只小鸡朝着左边走",
+        "training_prompt_en": "In a square, in front of a plaque that reads North Gate in Chinese, a sage walks right, while a chick walks left.",
+        "key_elements": ["sage","chick","North Gate"],
+        "style": ["bright cartoon"],
+        "image_path": "images/002.png"
+    },
+    {
+        "id": "003",
+        "original_word": "近朱者赤",
+        "pun_word": "金猪折翅",
+        "training_prompt_zh": "在一堆有翅膀的小猪中间围着一只翅膀折断的金色小猪",
+        "training_prompt_en": "Amidst a group of winged piglets, surrounds a golden pig with a broken wing.",
+        "key_elements": ["golden pig","broken wing"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/003.png"
+    },
+    {
+        "id": "004",
+        "original_word": "云鹤九霄",
+        "pun_word": "云鹤九消",
+        "training_prompt_zh": "在一个消消乐游戏中，有三种图案,分别为云、鹤、酒",
+        "training_prompt_en": "In a match-3 game, there are three types of symbols: cloud, crane, and wine.",
+        "key_elements": ["cloud","crane","wine","match-3 game"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/004.png"
+    },
+    {
+        "id": "005",
+        "original_word": "一塌糊涂",
+        "pun_word": "一塔胡涂",
+        "training_prompt_zh": "一座被涂鸦覆盖的塔",
+        "training_prompt_en": "A tower covered in graffiti",
+        "key_elements": ["tower","graffiti"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/005.png"
+    },
+    {
+        "id": "006",
+        "original_word": "击鼓传花",
+        "pun_word": "鸡骨穿花",
+        "training_prompt_zh": "一只骷髅鸡穿着花衣服",
+        "training_prompt_en": "A skeleton chicken wearing a flowery dress",
+        "key_elements": ["chick","skeleton","flowery dress"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/006.png"
+    },
+    {
+        "id": "007",
+        "original_word": "受之有愧",
+        "pun_word": "兽只有葵",
+        "training_prompt_zh": "在一片荒芜中，小野兽正小心翼翼地浇灌或守护着它唯一一株向日葵。",
+        "training_prompt_en": "In a desolate place, this little wild animal is carefully watering and protecting its only sunflower.",
+        "key_elements": ["animal","sunflower"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/007.png"
+    },
+    {
+        "id": "008",
+        "original_word": "囫囵吞枣",
+        "pun_word": "胡轮豚澡",
+        "training_prompt_zh": "一个留着大胡子的男人给水豚们洗澡，其他水豚都依次排队等待洗澡",
+        "training_prompt_en": "A bearded man was giving the capybaras a bath, and the other capybaras lined up to wait their turn.",
+        "key_elements": ["bearded man","capybara","bath"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/008.png"
+    },
+    {
+        "id": "009",
+        "original_word": "刮骨疗伤",
+        "pun_word": "呱骨聊伤",
+        "training_prompt_zh": "两只小骷髅青蛙在交流怎么治疗伤病",
+        "training_prompt_en": "Two little skeleton frogs are discussing how to treat injuries.",
+        "key_elements": ["skeleton frogs"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/009.png"
+    },
+    {
+        "id": "010",
+        "original_word": "惊为天人",
+        "pun_word": "鲸围舔人",
+        "training_prompt_zh": "几头鲸鱼围着一个人，鲸鱼们都伸出了舌头",
+        "training_prompt_en": "Several whales surrounded a person, and all the whales stuck out their tongues.",
+        "key_elements": ["whale","human","tongue"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/010.png"
+    },
+    {
+        "id": "011",
+        "original_word": "扬长避短",
+        "pun_word": "羊长匕短",
+        "training_prompt_zh": "一只被拉长的羊和一个被拉短的匕首",
+        "training_prompt_en": "A stretched-out sheep and a shortened dagger.",
+        "key_elements": ["sheep","dagger"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/.png"
+    },
+    {
+        "id": "012",
+        "original_word": "青梅竹马",
+        "pun_word": "青梅煮马",
+        "training_prompt_zh": "绿色的话梅正在烹饪一匹马",
+        "training_prompt_en": "Green plums are cooking a horse.",
+        "key_elements": ["green plum","horse"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/.png"
+    },
+    {
+        "id": "013",
+        "original_word": "五湖四海",
+        "pun_word": "五胡四嗨",
+        "training_prompt_zh": "五个留着胡子的人，其中四个在跳舞",
+        "training_prompt_en": "Five bearded men, four of whom are dancing.",
+        "key_elements": ["bearded man","dance"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/.png"
+    },
+    {
+        "id": "014",
+        "original_word": "蓝牙耳机",
+        "pun_word": "蓝牙儿鸡",
+        "training_prompt_zh": "一只露出蓝色牙齿的小鸡",
+        "training_prompt_en": "A chick showing its blue teeth",
+        "key_elements": ["chick","blue teeth"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/.png"
+    },
+    {
+        "id": "015",
+        "original_word": "预算",
+        "pun_word": "玉蒜",
+        "training_prompt_zh": "玉制作成的大蒜",
+        "training_prompt_en": "Garlic made of jade",
+        "key_elements": ["jade","garlic"],
+        "style": ["bright cartoon"],
+        "image_path": "images/.png"
+    },
+    {
+        "id": "016",
+        "original_word": "十字路口",
+        "pun_word": "识字鹿口",
+        "training_prompt_zh": "一只会认字的鹿，嘴里冒出几个字",
+        "training_prompt_en": "A deer that can read uttered a few words.",
+        "key_elements": ["deer","words"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/.png"
+    },
+    {
+        "id": "017",
+        "original_word": "插翅难逃",
+        "pun_word": "插翅男桃",
+        "training_prompt_zh": "一个穿着男士西装的桃子在用餐，用叉子插着一根鸡翅",
+        "training_prompt_en": "A peach dressed in a men's suit is eating, with a chicken wing skewered on a fork.",
+        "key_elements": ["peach","chicken wing"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/.png"
+    },
+    {
+        "id": "018",
+        "original_word": "绷不住了",
+        "pun_word": "蚌不住了",
+        "training_prompt_zh": "一只蚌从它的壳里打包离家出走",
+        "training_prompt_en": "A clam packed itself up from its shell and ran away from home.",
+        "key_elements": ["clam"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/.png"
+    },
+    {
+        "id": "019",
+        "original_word": "三足鼎立",
+        "pun_word": "三祖顶梨",
+        "training_prompt_zh": "三个佛祖头上都顶着一个梨子",
+        "training_prompt_en": "Each of the three Buddhas had a pear on its head.",
+        "key_elements": ["pear","Buddhas"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/.png"
+    },
+    {
+        "id": "020",
+        "original_word": "包罗万象",
+        "pun_word": "堡落万象",
+        "training_prompt_zh": "一个城堡里正在落下无数的大象",
+        "training_prompt_en": "Countless elephants are falling from a castle.",
+        "key_elements": ["elephants","castle"],
+        "style": ["bright cartoon,  clean background"],
+        "image_path": "images/.png"
+    },
+    {
+    "id": "0021",
+    "original_word": "张冠李戴",
+    "pun_word": "章冠狸戴",
+    "training_prompt_zh": "一只戴着章鱼帽子的狸猫，帽子上有章鱼触须，狸猫表情困惑。",
+    "training_prompt_en": "A raccoon dog wearing an octopus-shaped hat with tentacles, looking confused.",
+    "key_elements": [
+      "raccoon dog",
+      "octopus hat",
+      "tentacles"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+    },
+    {
+    "id": "0022",
+    "original_word": "招财进宝",
+    "pun_word": "招财金豹",
+    "training_prompt_zh": "一只金色的豹子正在招手，周围散落着金币和元宝，背景是明亮的财神主题装饰。",
+    "training_prompt_en": "A golden leopard is waving, surrounded by scattered gold coins and ingots, with a bright God of Wealth themed background.",
+    "key_elements": [
+      "golden leopard",
+      "gold coins",
+      "ingots",
+      "waving gesture"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+    },
+    {
+        "id": "0023",
+        "original_word": "天下第一",
+        "pun_word": "甜虾第一",
+        "training_prompt_zh": "一只可爱的甜虾站在领奖台上，举着金色的第一名奖牌，周围有欢呼的海洋生物观众。",
+        "training_prompt_en": "A cute sweet shrimp stands on a podium, holding a golden first-place medal, surrounded by cheering marine life audience.",
+        "key_elements": [
+        "sweet shrimp",
+        "podium",
+        "gold medal",
+        "marine audience"
+        ],
+        "style": [
+        "bright cartoon, clean background"
+        ],
+        "image_path": "images/0002.png"
+    },
+    {
+    "id": "0024",
+    "original_word": "八仙过海",
+    "pun_word": "八鲜锅海",
+    "training_prompt_zh": "八种新鲜海鲜在沸腾的火锅海洋中游泳，周围冒着热气",
+    "training_prompt_en": "Eight kinds of fresh seafood swimming in a boiling hot pot ocean, surrounded by steam",
+    "key_elements": [
+      "seafood",
+      "hot pot",
+      "steam",
+      "ocean waves"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  },
+   {
+    "id": "0035",
+    "original_word": "游刃有余",
+    "pun_word": "油刃有鱼",
+    "training_prompt_zh": "一把菜刀上涂满了油，刀锋上挂着一条小鱼，背景是厨房的切菜板。",
+    "training_prompt_en": "A kitchen knife coated with oil, with a small fish hanging from the blade, set against a cutting board in the background.",
+    "key_elements": [
+      "kitchen knife",
+      "oil",
+      "fish",
+      "cutting board"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  },
+    {
+    "id": "0002",
+    "original_word": "心惊肉跳",
+    "pun_word": "心晶肉条",
+    "training_prompt_zh": "一颗水晶心脏在跳动，旁边悬挂着几条肉条，背景简洁明亮",
+    "training_prompt_en": "A crystal heart beating with several meat strips hanging nearby, set against a bright, clean background",
+    "key_elements": [
+      "crystal heart",
+      "meat strips",
+      "beating motion"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  },
+    {
+    "id": "0036",
+    "original_word": "有口皆碑",
+    "pun_word": "有口皆杯",
+    "training_prompt_zh": "许多张开的嘴巴，每个嘴里都含着一个杯子，整齐排列成一行。",
+    "training_prompt_en": "Many open mouths, each holding a cup, neatly arranged in a row.",
+    "key_elements": [
+      "mouths",
+      "cups",
+      "row"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  },
+  {
+    "id": "0037",
+    "original_word": "胸有成竹",
+    "pun_word": "熊有橙竹",
+    "training_prompt_zh": "一只可爱的熊抱着一根橙色的竹子，表情自信满足，背景简洁明亮。",
+    "training_prompt_en": "A cute bear holding an orange bamboo with a confident and satisfied expression, set against a simple bright background.",
+    "key_elements": [
+      "bear",
+      "orange bamboo"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  },
+  {
+    "id": "0042",
+    "original_word": "先入为主",
+    "pun_word": "鲜乳围猪",
+    "training_prompt_zh": "一瓶新鲜牛奶被一群小猪团团围住，小猪们好奇地盯着牛奶瓶。",
+    "training_prompt_en": "A bottle of fresh milk is surrounded by a group of little pigs, who are curiously staring at the milk bottle.",
+    "key_elements": [
+      "milk bottle",
+      "little pigs",
+      "fresh milk"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  },
+  {
+    "id": "0043",
+    "original_word": "相亲相爱",
+    "pun_word": "箱琴相爱",
+    "training_prompt_zh": "一个拟人化的复古木纹行李箱与一把优雅的大提琴深情相拥，身上飘着爱心。",
+    "training_prompt_en": "An open box contains a guitar, and another open box holds a heart, placed side by side and snuggling together.",
+    "key_elements": [
+      "box",
+      "guitar",
+      "heart"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  },
+  {
+    "id": "0044",
+    "original_word": "先发制人",
+    "pun_word": "仙发纸人",
+    "training_prompt_zh": "一位由纸做成的中国神仙。",
+    "training_prompt_en": "A Chinese deity made of paper.",
+    "key_elements": [
+      "deity",
+      "paper"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  },
+  
+  {
+    "id": "0095",
+    "original_word": "百炼成钢",
+    "pun_word": "百链秤钢",
+    "training_prompt_zh": "一百条铁链悬挂着一个巨大的秤，秤上放着一块闪亮的钢块，背景是明亮的卡通风格。",
+    "training_prompt_en": "One hundred iron chains hanging a giant scale with a shiny steel block on it, in a bright cartoon style.",
+    "key_elements": [
+      "iron chains",
+      "scale",
+      "steel block"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  },
+  {
+    "id": "0096",
+    "original_word": "百花争艳",
+    "pun_word": "白花蒸燕",
+    "training_prompt_zh": "一朵白色的花正在蒸笼里蒸着一只小燕子，周围冒着热气",
+    "training_prompt_en": "A white flower steaming a little swallow in a steamer, with steam rising around",
+    "key_elements": [
+      "white flower",
+      "steamer",
+      "little swallow",
+      "steam"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  },
+  {
+    "id": "0097",
+    "original_word": "百感交集",
+    "pun_word": "百竿蕉集",
+    "training_prompt_zh": "一百根竹竿上挂满了香蕉，香蕉们聚集在一起，形成有趣的场景",
+    "training_prompt_en": "One hundred bamboo poles with bananas hanging on them, all gathered together in an interesting scene",
+    "key_elements": [
+      "bamboo poles",
+      "bananas",
+      "gathering scene"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  },
+  {
+    "id": "0098",
+    "original_word": "百发百中",
+    "pun_word": "百发百钟",
+    "training_prompt_zh": "一个弓箭手站在钟表店前，连续射箭，每支箭都精准地击中悬挂的钟表，发出清脆响声。",
+    "training_prompt_en": "An archer stands in front of a clock shop, shooting arrows that precisely hit hanging clocks, producing clear ringing sounds.",
+    "key_elements": [
+      "archer",
+      "arrows",
+      "clocks",
+      "clock shop"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  },
+  {
+    "id": "0099",
+    "original_word": "白手起家",
+    "pun_word": "白手砌家",
+    "training_prompt_zh": "一个人用白色的手在砌砖建造一个小房子，周围散落着建筑工具和砖块。",
+    "training_prompt_en": "A person with white hands is laying bricks to build a small house, with construction tools and bricks scattered around.",
+    "key_elements": [
+      "person",
+      "white hands",
+      "bricks",
+      "small house"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  },
+  {
+    "id": "0100",
+    "original_word": "白驹过隙",
+    "pun_word": "白驹过溪",
+    "training_prompt_zh": "一匹白马快速奔跑，轻盈地跨过一条小溪，水花四溅，背景是明亮的草地。",
+    "training_prompt_en": "A white horse running swiftly and lightly crossing a small stream, with splashing water, set against a bright grassy background.",
+    "key_elements": [
+      "white horse",
+      "stream",
+      "splashing water",
+      "grass"
+    ],
+    "style": [
+      "bright cartoon, clean background"
+    ],
+    "image_path": "images/0002.png"
+  }
+]
