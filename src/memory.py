@@ -135,3 +135,17 @@ class ExperienceMemory:
             lines.append(f"- {factor} (出现{count}次)")
 
         return "\n".join(lines)
+
+    def get_statistics(self) -> Dict[str, Any]:
+        """获取经验统计信息"""
+        total = len(self.experiences)
+        if total == 0:
+            return {"total": 0, "success_rate": 0.0, "avg_iterations": 0.0}
+
+        success_count = len([e for e in self.experiences if e.success])
+        avg_iterations = sum(e.iteration for e in self.experiences) / total
+        return {
+            "total": total,
+            "success_rate": success_count / total,
+            "avg_iterations": avg_iterations
+        }

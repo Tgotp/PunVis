@@ -6,5 +6,9 @@
   "simple_scene": "Keep the scene simple and focused, avoid unnecessary complexity",
   "highlight_keyword": "Visually emphasize the key character that forms the pun",
   "literal_representation": "Represent the pun characters literally in the scene when possible",
-  "no_text": "HIGHEST PRIORITY: Absolutely NO text, letters, signs, words, or written characters in the scene - use ONLY visual elements and actions"
+  "no_text": "HIGHEST PRIORITY: Absolutely NO text, letters, signs, words, or written characters in the scene - use ONLY visual elements and actions",
+  "dynamic_emphasis": "通过对比或动作设计（如动态对比）突出核心意象。",
+  "focus_guidance": "背景设计应引导观察者聚焦于关键细节，同时增强整体美感。",
+  "dynamic_association": "优先利用谐音、形状或动作等多维度提示来强化场景与成语核心意境的关联性。",
+  "contrast_emphasis": "通过对比（如状态、动作等）突出关键视觉线索，增强画面的叙事性和象征意义。"
 }

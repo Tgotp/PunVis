@@ -5,10 +5,23 @@
 import argparse
 import os
 import shutil
+import sys
 from openai import OpenAI
 
 from memory import ExperienceMemory
 from agent import PunVisAgent
+
+
+def setup_console_encoding():
+    """在 Windows 控制台下启用 UTF-8，避免 emoji 打印报错"""
+    try:
+        if hasattr(sys.stdout, "reconfigure"):
+            sys.stdout.reconfigure(encoding="utf-8")
+        if hasattr(sys.stderr, "reconfigure"):
+            sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        # 编码设置失败不影响主流程
+        pass
 
 
 def cleanup_images(output_dir="output/images"):
@@ -21,11 +34,14 @@ def cleanup_images(output_dir="output/images"):
 
 
 def main():
+    setup_console_encoding()
+
     # 先加载配置
     try:
         from config import (
             OPENAI_API_KEY, OPENAI_BASE_URL,
-            MAX_ITERATIONS, MIN_CONFIDENCE
+            MAX_ITERATIONS, MIN_CONFIDENCE,
+            TEXT_MODEL, VISION_MODEL
         )
     except ImportError:
         print("❌ 请先创建 src/config.py 文件")
@@ -40,7 +56,10 @@ def main():
     # 清理旧图片
     cleanup_images()
 
-    print(f"⚙️ 使用配置: max_iterations={args.max_iterations}, min_confidence={args.min_confidence}")
+    print(
+        f"⚙️ 使用配置: max_iterations={args.max_iterations}, "
+        f"min_confidence={args.min_confidence}, text_model={TEXT_MODEL}, vision_model={VISION_MODEL}"
+    )
 
     # 创建客户端
     client_kwargs = {"api_key": OPENAI_API_KEY}
@@ -52,7 +71,7 @@ def main():
     memory = ExperienceMemory(project_root=".")
 
     # 创建Agent
-    agent = PunVisAgent(client, memory)
+    agent = PunVisAgent(client, memory, text_model=TEXT_MODEL, vision_model=VISION_MODEL)
 
     # 运行
     success, attempts, summary = agent.generate_with_reflection(
