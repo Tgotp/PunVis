@@ -1,139 +1,92 @@
-# 成语双关语可视化Agent
+# 成语双关语可视化 Agent
 
-一个具备**经验学习**能力的Agent系统，能将成语转化为易于理解的视觉双关语。
+一个面向成语双关语可视化的闭环 Agent Demo。系统已打通从成语输入到图像生成、视觉评估、反思迭代和经验沉淀的完整流程。
 
-## 核心特性
+## 项目状态
 
-### 🤖 Agent能力
-- **经验记忆**: 自动保存每次尝试的成功/失败经验
-- **反思学习**: 每次迭代后分析原因，提取可复用经验
-- **经验应用**: 生成新内容时自动参考历史经验
-- **持续积累**: 经验可以跨会话积累，越用越聪明
+- 当前状态：已完成端到端可运行 Demo（结项）
+- 主要目标：验证流程可运行性与闭环可迭代性
+- 当前定位：工程原型，已具备后续研究扩展基础
 
-### 🧠 工作流程
+## 方法流程（简版）
 
-```
+```text
 输入成语
-    ↓
-Agent读取历史经验
-    ↓
-LLM生成双关语 + 场景（应用经验）
-    ↓
-生成图片
-    ↓
-VLM看图猜成语
-    ↓
-Agent反思分析（成功/失败原因）
-    ↓
-保存经验到Memory
-    ↓
-  ├─ 猜对了 → ✅ 记录成功经验，结束
-  └─ 猜错了 → 💡 应用经验教训，重新生成
-              ↓
-        重复直到成功或达最大迭代次数
+  -> 读取历史经验
+  -> 生成双关语与场景
+  -> 生成图片
+  -> VLM 看图猜成语
+  -> 反思分析（成功/失败）
+  -> 写回经验库
+  -> 猜中则结束；未猜中则继续迭代
 ```
 
-## 项目结构
+## 代码结构
 
-```
+```text
 punvis/
 ├── src/
-│   ├── config.py          # API配置
-│   ├── memory.py          # 经验记忆系统 ⭐
-│   ├── agent.py           # 核心Agent（反思+学习）⭐
-│   └── main.py            # 入口
-├── memory/                # 经验存储目录 ⭐
-│   ├── experiences.json   # 经验记录
-│   └── rules.json         # 总结的规则
+│   ├── main.py                # 入口
+│   ├── agent.py               # 流程编排
+│   ├── generation_service.py  # 文本生成相关
+│   ├── vision_service.py      # 图像生成与视觉评估
+│   ├── reflection_service.py  # 反思与经验写回
+│   ├── memory.py              # 经验记忆系统
+│   ├── agent_types.py
+│   ├── agent_utils.py
+│   ├── prompts.py
+│   ├── config_template.py
+│   └── config.py              # 本地配置（自行创建）
+├── memory/
+│   ├── experiences.json       # 经验记录
+│   └── rules.json             # 规则总结
 ├── examples/
-│   ├── PunBenchmark.json  # 示例数据集
+│   ├── PunBenchmark.json
 │   └── chengyu_examples.md
+├── image/                     # 成功示例图
 └── output/
-    └── images/            # 生成的图片
+    └── images/                # 运行时输出
 ```
 
-## 快速开始
+## 快速运行
 
-### 1. 配置API
+1) 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+2) 创建配置文件
 
 ```bash
 cp src/config_template.py src/config.py
-# 编辑 src/config.py 填入API密钥
 ```
 
-### 2. 运行
+在 `src/config.py` 中填写 API 配置。
+
+3) 运行示例
 
 ```bash
-cd /Users/tgotp/program/punvis
-python src/main.py --idiom "机不可失"
+python src/main.py --idiom "画龙点睛"
 ```
 
-### 3. 查看经验
+## 成功示例
 
-运行后会在 `memory/experiences.json` 中保存经验记录。
+当前仓库中的成功案例图位于 `image/` 目录：
 
-## Memory系统
+- `image/���˷θ�-���˷θ�.png`
+- `image/�����㾦-�������.png`
+- `image/������ - ������.png`
 
-### 经验记录格式
+在支持图片渲染的平台中可直接展示：
 
-```json
-{
-  "idiom": "机不可失",
-  "pun": "鸡不可湿",
-  "scene_zh": "一只小鸡在下雨天撑着伞...",
-  "success": true,
-  "iteration": 2,
-  "reason": "主体明确（小鸡撑伞），动作清晰（避雨），同音自然",
-  "key_factors": ["主体明确", "动作清晰", "同音自然"],
-  "timestamp": "2024-01-15T10:30:00",
-  "vlm_feedback": "看到了小鸡和伞，联想到鸡..."
-}
-```
+![示例1](image/���˷θ�-���˷θ�.png)
+![示例2](image/�����㾦-�������.png)
+![示例3](image/������ - ������.png)
 
-### Agent如何使用经验
+## 结论
 
-1. **生成前**: 读取相关成语的经验，避免重复错误
-2. **生成时**: LLM prompt中包含历史经验和成功模式
-3. **反思后**: 提取关键教训，更新经验库
-4. **持续优化**: 随着经验积累，生成质量不断提升
+- 已验证“生成 -> 评估 -> 反思 -> 记忆”的闭环流程可行。
+- 系统可在部分成语上实现低轮次收敛并成功猜回。
+- 项目已达到“可演示、可复现实验流程”的阶段性目标。
 
-## 示例对话
-
-**第一轮尝试:**
-```
-Agent: 生成双关语 "鸡不可湿"
-VLM: 猜成 "鸡犬不宁" ❌
-Agent反思: 问题在于场景没有体现"失/湿"的对比
-保存经验: 需要增加"湿vs干"的视觉对比
-```
-
-**第二轮尝试:**
-```
-Agent: 读取经验，增加"小鸡身上干的，周围下雨"的对比
-生成新场景: "小鸡在雨中紧紧抱着伞，身上有阳光..."
-VLM: 猜成 "机不可失" ✅
-Agent反思: 成功！关键在于视觉对比明确
-保存经验: 视觉对比是关键成功因素
-```
-
-## 配置说明
-
-`src/config.py`:
-
-```python
-OPENAI_API_KEY = "your-key"
-OPENAI_BASE_URL = "https://jusuan.ai/v1"  # 如果使用代理
-```
-
-## 依赖
-
-```bash
-pip install openai
-```
-
-## 未来扩展
-
-- [ ] 经验可视化分析
-- [ ] 批量处理成语集
-- [ ] 集成真实图像生成API
-- [ ] 经验导出为训练数据
